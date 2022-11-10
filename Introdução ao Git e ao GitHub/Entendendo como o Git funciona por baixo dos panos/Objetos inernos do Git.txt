@@ -1,0 +1,12 @@
+Os tipos básicos de objetos internos do Git são BLOBS, TREES E COMMITS.
+
+BLOBS
+O objeto Blob é conhecido como bolha, e o bloco básico de composição, sendo o local onde os arquivos ficam armazenados. O objeto Blob contem metadados do Git dentro dele sendo o Tipo(Blob), o tamanho da string ou arquivo, uma barra contrária com o zero(\0) e o conteúdo de fato do arquivo. 
+
+TREES
+O objeto Tree é conhecido como arvore, armazenam e apontam para tipos de Blobs diferentes, e Commits. o objeito Tree(arvore) também possui metadados: barra contrária com o zero(\0), ela aponta para um Blob que por sua vez tem um SHA1 e o nome do arquivo. A arvore é responsavel por montar toda a estrutura onde estão localizados os arquivos, as arvores também apontam para outras arvorese e por sua vez também possuem um SHA1 desses metadados.
+
+COMMITS
+O Commit é o objeto que vai juntar tudo, ele vai dar sentido para a alteração que você está fazendo, ele aponta para uma árvore, para um parete(Commits realizado anteriormente), aponta para um autor, aponta para uma mensagem(mensagem que explicam as alterações dando significado para os aquivos e pastas contidos). o COmmit tambem possui um timestamps(um carimbo de tempo onde armazena a data e a hora que foi criado). os Commits também possuiem um SHA1.
+
+OBS: Qualquer alteração realizada em quaisquer objetos, alteram os respectivos metadados que automaticamente geram um novo SHA1 alterando também os metadados dos commits sendo impossivel a alteração de um commit por estranhos que não seja facilmente detectada atraves do histórico dos Commits garantindo assim toda a segurança do processo.

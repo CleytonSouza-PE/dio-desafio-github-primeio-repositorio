@@ -1,0 +1,46 @@
+Realizando a instalação do GIT no Windows
+
+Para baixar o Git na sua maquina abra o seu navegador de internet e entre no website do Git "https://git-scm.com/"
+Escolha a instalação do windows clicando em "Download for Windows"
+Ele vai abrir uma janela para que seja indicado onde será feita a instalação. Na janela você clica em "Next"
+Na segunda janela "Select Components" verificar se as janelas "Git Bash Here" e "Git GUI Here" estão marcadas, caso não estejam favor marcar e clicar em "Next".
+Na janela "Choosing the default editor userd by Git" para escolher o editor de texto padrão do Git, escolher o "Use Vim (the ubisquintous text editor) as Git's default editor" e clique em "Next".
+Na janela "Adjusting the name of the initial branch in new repositories" é solicitado para o usuário escolhe qual a sua "Branch", selecione a opção "Let Git decide" para permitir que o proprio Git faça essa escolha e clique em "Next".
+Na tela "Adjusting your PATH environment" deixe como está e clique em "Next".
+Na tela "Cloossing the SSH executable" clique em "Next".
+Na tela "Cloossing HTTPS transport backend" clique em "Next".
+Na tela "Configuring the line ending conversions' é solicitado que o usuário decida qual o tipo de quebra de linha e o tipode caracterer desejado, escolher a opção do windows "Checkout Windows-style, commit Unix-style line endings" e clique em "Next".
+Na tela "Configuring the terminal emulator to use with Git Bash" Clique em "Next".
+Na tela "Cloose the default behavior of 'git pull'" e clique ne "Next".
+Na tela "Cloose a credential helper" escolha a opção "Git Credential Manager Core" e clique em "Next".
+Na tela "Configuring extra options" clique em "Next".
+Na tela "Configuring experimental support for pseudo consoles" clique em "Instal"
+
+
+Realizando a instalação do GIT no Linux
+
+Entrar na página inicial do Git: https://git-scm.com/
+Clicar em Downloads
+Clicar o ícone do Linux
+Escolher dependendo do tipo do Linux que você usa. Ex.: Debian/Ubuntu
+Para instalar a versão mais recente digite as linhas de comando a seguir:
+
+Primeiro comando: sudo add-apt-repository ppa:git-core/ppa -y
+OBS:	O comando "sudo" significa a solicitação da permissão do super usuário.
+	A fleg "-y" significa que não vai perguntar mais nada, é a mesma coisa de passar um sim em qualquer pergunta.
+Em seguida apertar o ENTER
+
+Segundo comando: sudo apt update
+Em seguida apertar o ENTER
+
+Terceiro comando(comando de instalação do git): sudo apt install git
+Ele vai prosseguir um processo de instalação. vai perguntar se você deseja prosseguir com a instalação? Você digita y e prossegue a instalação e a mesma será realizada.
+
+O git instalado iremos abrir o terminal e digitar:
+perkle@perkles-desktop:/$ git --version		OBS: esse comando irá mostrar qual a versão do Git está instalada.
+
+
+ 
+
+	
+

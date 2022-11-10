@@ -1,0 +1,75 @@
+No dia 12 de agosto de 2021 por medida de segurança o GitHub desabilitou o processo de autenticação ao empurrar o seu código do Git para o GitHub. Atualmente esses metétodos foram substituídos pela Chave SSH e Token.
+
+Chave SSH
+
+A Chave SSH falando agrosso modo é uma forma uma conexão segura e encriptada entre duas máquinas, no caso de uma máquina local e o servidor do GitHub configurando essa máquina local como uma máquina confiável para o GitHub estabelecendo essa conexão com duas chaves sendo uma chave pública e uma chave privada de forma que nós vamos pegar essa chave pública e colocala no GitHub e apartir do momentos que se fizer isso O GitHum já vai conhecer a nossa máquina juntamente com todos os diretórios existentes para esse fim de forma que ao empurrar o nosso código nem será mais preciso digitar nenhuma senha tornando o processo mais rápido e com maior segurança. Para isso precisamos Gerar o par de chaves publica/privada e configurar no GitHub.
+
+Gerando Chave SSH através do CLI(terminal) no Windows/Linux
+
+Abriremos o terminal do Linux ou o terminal do Git bash no Windows;
+Iremos digitar a seguinte linha de comando: "ssh-keygen -t ed25519 -C cleytoneduardo@gmail.com e aperte a tecla Enter;
+OBS "ed25519" é o tipo de cliptografia da chave e "cleytoneduardo@gmil.com" seria o seu e-mail cadastrado do GitHub.
+Após clichar a tecla enter vai ser informado que está sendo gerado o par de chaves publica e privada e o respectivo local onde a mesma está sendo gravada. você pode apertar a tecla enter
+Vai ser solicitada a criação de uma senha, digite a senha, aperte enter e confime a senha digitando novamente, após isso estará gerada o par de chaves publica e privada sendo informado o local onde as chaves estão e o tipo de criptografia usado.
+Após criada o par de chaves publica e privada iremso navegar até o local indicado onde estão as chaves através do terminal digitando a seguinte linha de comando. Exemplo: cd /c/Users/Lucas/.ssh/ no caso do GitBash do  windows e "cd /home/perkles/.ssh/" no caso do terminal do linux.Iremos visualizar o conteudo da chave publica digitando o seguinte comando no terminal: cat "id_25519.pub". A chave deverá ser copiada e configurada no GitHub.
+
+
+Como configurar a Chave SSH no GitHub  no Windows/Linux
+
+Após criar uma conta no GitHub através do site "https://github.com/", você clica no icone da sua imagem no canto superior direito da tela;
+Clicar em settings;
+Procure o menu "SSH and GPG keys";
+Clique nele, logo acharemos o menu "SSH keys", do seu lado direito clique no link "New SSH keys",
+Preencher o menu "Títle". Ex: "Minha máquina Linux";
+Preencher o menu "Key" com o conteúdo da chave publica copiada no processo de geração de chave SSH descrito anteriormente;
+Clique em "Add SSH keys"
+Vai ser pedido para autenticar usando o seu login e senha, nesse caso autentique.
+Após isso deveremos inicializar o SSH Agent.
+
+Inicializando o SSH Agent  no Windows/Linux
+
+Ir até o diretório .ssh através do terminal usando a seguinte linha de comando:  cd /c/Users/Lucas/.ssh/ no caso do GitBash do  windows e "cd /home/perkles/.ssh/" no caso do terminal do linux.
+Para inicializar o SSH Agent através do terminal devemos digitar a seguinte linha de comando: "eval $(ssh-agent -s)"
+Após Inicializar o SSH Agent vamos entregar a chave privada para o mesmo utilizando a seguinte linha de comando atraves do terminal direto do diretório .ssh: "ssh-add id_ed25519" e clique na tecla enter;
+digite a senha cadastrada para a chave anteriormente;
+Após isso irá aparecer a mensagem confirmando a adicção da identidade informando o email adcionado.
+Configuração da Chave SSH terminado.
+
+Testando a chave SSH clonando um repositório no Windows/Linux
+
+Navegar até um repositório publico do GitHub;
+Clicar no menu "<> code" localizado na parte central superior do repositório publico;
+No menu "Clone" ir até o link "SSH" para copiar o respectivo link do repositório;
+Após abrir o terminal no diretório .SSH digitar o comando "git clone" + "link ssh copiado no repositório do GitHum".
+Ex: "git clone git@github.com:Perkles/perkles.github.io.git"
+Vai ser solicitada a permissão apara salvar essa assinatura digital, vamos autorizar digitando "yes" e apertando a tecla enter;
+Após isso o repossitório vai ser adcionado e o processo de clonagem devidamente concluído.
+
+Token de acesso pessoal
+
+Diferente da Chave SSH o Token de acesso pessoal vai solicitar o seu tokem sempre que vc precisar empurrar o seu código para ho GitHub sendo necessário gerar um tokem no GitHub, guardarlo na sua máquinar ou em outro local de sua preferência e sempre que você for realizar um Commit o mesmo vai ser solicitado no lugar da sua senha ao efetuar o login.
+
+Configurando Tokem de acesso pessoal no Windwos e no Linux
+
+Após criar uma conta no GitHub através do site "https://github.com/", você clica no icone da sua imagem no canto superior direito da tela;
+Clicar em settings;
+Procure e clique no link "Developer settings"
+Clique no menu "Personal Access Tokens"
+Cliquem no menu "Generate new token"
+No menu "Note" você coloca um descrição como por exemplo: "Meu token"
+Caso queira você pode configurar uma data para expiração no token como por exemplo 60 dias;
+Caso você só queira mexer nas opções padrões do Git no terminal é recomendado marcar a opção "repo".
+Após essa configuração você desce até o final da pagina e clica no icone "Generate token"
+Após isso será exibido o seu token. Você deve copialo e guardar em um arquivo ou lugar seguro. OBS: Tenha certeza de que você copiou e guardou o tokem em um local seguro, pois vc não terá mais acesso a esse tokem, nem memso voltando o respectivo link sendo necessario a geração de um novo token.
+
+Testando a Token de acesso pessoal clonando um repositório no Windows/Linux
+
+Navegar até um repositório publico do GitHub;
+Clicar no menu "<> code" localizado na parte central superior do repositório publico;
+No menu "Clone" ir até o link "HTTPS" para copiar o respectivo link do repositório;
+Após abrir o terminal no diretório .SSH digitar o comando "git clone" + "link ssh copiado no repositório do GitHum".
+Ex: "git clone git@github.com:Perkles/perkles.github.io.git"
+Após apertar a tecla enter vai ser realizado o processo de login com autenticação do tokem gerado anteriormente e guardado em local seguro.
+após isso, o repositório será baixado via token.
+
+

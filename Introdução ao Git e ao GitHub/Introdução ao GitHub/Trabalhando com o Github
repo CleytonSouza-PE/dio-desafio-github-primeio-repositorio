@@ -1,0 +1,66 @@
+Criando conta no GitHub
+Entrar no site: https://github.com/
+Clicar no menu "Sign up" localizado no canto superior direito da página e seguir o processo padrão para criação de conta em qualquer página.
+
+Escolher o seu "User name"
+Informar o seu endereço de e-mail
+Escolher uma senha
+Vai chegar um e-mail de verificação para você ter acesso a plataforma.
+
+
+OBS: É interessante escolher o mesmo "User nme" utlizado na configuração do Git para evitar que o seu repositório local fique diferente do remoto pois futuramente também poderão ser feitos commits diretamente do repositório remoto devido a "user names" diferentes.
+* Podemos verificar o user name cadastrado no git através do seguinte comando: "git config --list"
+caso esteja diferente deveremos reescrever a configuração do user name através do comando:
+git config --global --unset user .email  (para resetar o e-mail)
+git config --global --unset user.name (para resetar o user name)
+
+caso você queira listar novamente as configurações do git através do comando "git config --list" vai ver que as configurações estarão apagadas. Para reescrever as credenciais deverá usar o seguinte comando:
+git config --global user.email "e-mail"   (para reescrever o e-mail)
+git config --global user.name "User name" (para reescrever o user name)
+caso você queira listar novamente as configurações do git através do comando "git config --list" vai ver que as configurações estarão atualizadas.
+
+O GitHub além de ser uma loja de aplicativos na qual você pode utilizar no seu fluxo ele também é uma rede social onde você pode seguir as pessoas e ser seguido vendo quais os códigos e projetos as pessoas estão engajadas. entre outros. Você também pode opinar contribuindo para outros repositórios.
+
+
+Criando repositórios no GitHub
+
+Para criar um repositório você terá que seguir os seguintes passos:
+
+Entrar no site: https://github.com/
+realizar o login
+clicar no menu da foto do seu usuário localizado no canto superior direito da página
+clicar em "Seus repositórios" 
+clicar no botão novo localizado no cano superior direito da página.
+Em "Repositórioy name" digitar o nome do repositório
+No menu "Description" adicionar uma descrição
+Selecionar se o repositório vai ser publico ou privado
+Escolher se vai iniciar o repositório com o arquivo README
+OBS: o arquivo "README" é o arquivo que conta a história do projeto. Com essa opção marcada o GitHub identifica os arquivos com extensão markdown e transforma automaticamente em "README". Caso o programador já tenha criado o arquivo "README" não se faz nescessário marcar essa opção
+Clicar no Botão "Create repository".
+
+Após criarmos um repositório o GitHub ja nos mostra o que devemos fazer, o mesmo vai ser um repositório vazio sendo necessário ter que ir lá no repositório local e aponta-lo para o GitHub.
+
+Apontando repositório local para o GitHub
+
+Copie a URL do repositório do GitHub
+Para apontar o repositório local para o GitHub temos com o terminal do Linux ou o Git Bash aberto no windows dentro da pasta do repositório local usaremos a seguinte linha de comando:
+"git remote add origin "link do repositório copiado anteriormente"
+Podemos conferir as listas dos repositórios remotos que temos cadastrados usando o seguinte comando:
+"git remote -v"
+
+Após apontar o repositório local para o GitHub temos que empurrar o repositório local para o GitHub usando o seguinto comando:
+git push origin master
+após dar um ENTER vai ser feita a verificação de segurança cadastrada do GitHub. Após logada será informada a quantidade de objetos, para onde foi enviado e para qual branch foi enviada.
+
+
+
+
+
+
+
+
+
+
+
+
+

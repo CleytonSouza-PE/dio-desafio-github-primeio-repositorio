@@ -1,0 +1,73 @@
+Iniciando o Git e criando um commit
+
+Iniciar o Git:
+
+-git init
+Comando "git init" inicia o git dentro de um diretório/pasta
+Ex.: otavio@perkles-desktop MIGW64 /c/workspace/livro-receitas git init                  
+     Initialized empyt Git repository in c/workspace/livro-receitas$ .git/
+
+OBS: O próprio git informa que foi criado um repositório vazio  em "c/workspace/livro-receitas$ .git/". Observe que ao iniciar o git dentro da pasta livro de receitas foi criada uma pasta chamada ".git" que se trata de uma pasta gerencial do git onde fica armazenado todo o código que estará sendo versionado, o ponto (.) antes do nome da pasta significa que se trata de uma pasta oculta e para visualiza-la temos que usar o comando "ls -a" onde a flag "-a" significa que irão ser listados os arquivos e pastas ocultas.
+
+
+Iniciar o Versionamento
+
+OBS: Caso seja a primeira vez que você esteja utilizando o Git, antes de criar o nosso primeiro arquivo dentro da pasta do git deve ser feita uma configuração inicial que será a criação e um "User Name"(um apelido) e um "e-mail" um vez que quando um objeto commit é criado é associado um autor, isso tem que ser configurado antes para que quando for criado o commit ele tenha um autor atrelado a ele.
+
+Configuração de e-mail:
+
+Dentro da pasta escolhida para iniciar o Git vamos rodar o seguinte comando:
+
+git config --global user.email "otaviocha@gmai.com"
+
+Ex.:
+otavio@perkles-desktop MIGW64 /c/workspace/livro-receitas$ git config --global user.email "otaviocha@gmai.com"
+
+OBS: o codigo "--global" significa que estamos criando um configuração global e não somente para ser utlizado para uma pasta específica.
+
+Configuração de Usuário(apelido)
+
+git config --global user.name cleyton
+
+Adcionando um arquivo na pasta Git
+
+Antes de adcionar um arquivo na pasta Git, nos vamos trabalhar com um tipo de aquivo diferente, vamos trabalhar com um editor de texto Markdown que nada mais é doque uma forma mais humana de se inscrever um arquivo html que por sua vez é o esqueleto, a estrutura básica de uma página html.
+
+Para se usar textos de tamanhos diferentes no html é preceso utilizar as tags: <h1>, <h2> ...
+Ex.: 
+	<h1>Título de nível 1<h1>
+	<h2>Título de nível 2<h2>
+	<h3>Título de nível 3<h3>
+	
+para se usar testos de tamanhos diferentes no Markdown devemos utilizar as tags: #, ## ...
+Ex.:
+	#Título de nível 1
+	##Título de nível 2
+	##Título de nível 3
+
+Existem varios programas de edição de texto que utilizam a tecnologia Markdown, para essa curso utlizaremos o Typora. Recomendo baixar para dar prosseguimento ao curso.
+Apos baixado, crie um arquivo qualquer, por exemplo escreva uma recita de stronoff de frango  e salve na pasta escolhida para inicialização o git.
+Ex.: otavio@perkles-desktop MIGW64 /c/workspace/livro-receitas$
+
+-git add
+Para adcionar todos os arquivos da pasta digite o seguinte comando no terminal:
+git add *
+Ex.:
+otavio@perkles-desktop MIGW64 /c/workspace/livro-receitas$ git add *
+
+Criar um commit
+
+-git commit
+
+Para criar um commit digite o seguinte código no terminal:
+git commit -m "commit inicial"
+Ex.:
+otavio@perkles-desktop MIGW64 /c/workspace/livro-receitas$ git commit -m "commit inicial"
+OBS: a parte do código enter aspas "commit inicial" é a mensagem associada a todo commit. 
+
+Após a criação do commit o terminal mostra as seguintes informações:
+Sha1 do Commit
+Mensagem do Commit
+O nome do arquivo
+	
+

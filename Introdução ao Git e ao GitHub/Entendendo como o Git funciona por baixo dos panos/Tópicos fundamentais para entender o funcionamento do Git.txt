@@ -1,0 +1,14 @@
+SHA1:
+A sigla SHA significa Secure Hash ALgorithm (Algoritmo de Hasj seguro, é um conjunto de funções hash criptograficas projetadas pela NSA (Agência de Segurança Nacional dos EUA)
+O SHA1 é um algoritimo de encriptação. Ele é um algaritmo que vai pegar o seu arquivo seja ele qual for e vai embaralhar ele de uma forma muito específica. A saída dessa encriptação gera um conjunto de characteres identificador de 40 digitos único e serve como identificação.
+Falando a grosso modo o SHA1 é uma forma curta de representar um estado do arquivo.
+Exemplo1
+openssl sha1 teste.txt
+SHA1(teste.txt)=47ad3f360ced2583c225d13eae57f59e30ceccb9
+OBS: o "openssl sha1" demonstra que estamos usando o sha1 para encriptografar o arquivo teste.txt e ao dar entre ele vai nos jogar ogar esse conjunto de characteres "HA1(teste.txt)=47ad3f360ced2583c225d13eae57f59e30ceccb9"
+
+Exemplo2
+echo "ola mundo" | openssl sha1
+> (stdin)= f9fc856e559b950175f2b7cd7dad61facbe58e7b
+
+OBS: O comando "echo" seguido de uma string "ola mundo" joga devolta a stdin no terminal, só que dessa vez estamos modificando o comportamento do echo passando passando esse payp (|) jogando a stdin "ola mundo" para dentro de um algoritmo de encriptação onde o "openssl sha1" demonstra que estamos usando o sha1 e ao dar entre ele vai nos jogar esse conjunto de characteres "stdin)= f9fc856e559b950175f2b7cd7dad61facbe58e7b"

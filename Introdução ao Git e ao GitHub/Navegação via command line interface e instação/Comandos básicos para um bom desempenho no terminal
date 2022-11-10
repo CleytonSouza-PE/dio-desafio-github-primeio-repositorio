@@ -1,0 +1,126 @@
+Comandos básicos para um bom desempenho no terminal
+
+O Git é um programa CLI (Commnd-line Interface) é um programa em que os comandos são executados via linha de comando diferente de outros que são GUI (Graphical User Interface) onde exite um modelo de interface gráfica que possibilita interação através de componentes gráficos.
+OBS: Nos dias atuais exitem programas que acrecentam uma interface grafica no Git que facilita a intereação.
+
+Antes da instalção do Git os usuários que tem o sistema operacinal Windows(derivado do Shell) vão interagir com terminaal com alguns comandos diferentes de usuários que tem sistemas operacionais Unix-Like(derivado do Bash)
+
+Comandos básicos no terminal do Windows
+
+OBS: Todos os comandos utilizados nos terminais possuiem variancias(flags/complementos) que acrescentam, modificam ou formatam a forma que esses comandos são delvolvidos(exibidos).
+
+
+dir - Lista os diretorios e aquivos existentes na pasta em que estamos situados.
+Exemplo: 
+	c:\Users\Lucas>dir
+	
+cd - Permite a navegação entre as pastas sendo igual para todos os sistemas operacionais.
+Exemplo 1:
+	c:\Users\Lucas>cd /
+	c:\>					OBS: observe que fomos levados a base do diretório "C:\>"
+
+Exemplo 2:
+	c:\>cd Windows
+	c:\Windows>				OBS: observe que fomos levados para a pasta "c:\Windows>"
+	
+cd .. - Utilizado para retroceder um nível na navegação.
+Exemplo: 
+	c:\Windows>cd ..
+	c:\>	
+	
+cls - Comando utlizado para limpar o terminal quando o mesmo está muito cheio
+Exemplo:
+	c:\> cls
+
+Ctrl+l - Tecla de atalho que realiza a mesma função do "clear" ou seja, limpa a tela do terminal.
+
+Tab - Tecla de atalho de autocompletar
+Exemplo:
+	c:\>W+Tab
+	c:\Windows>
+
+mkdir - Comando utilizado para criação de pasta
+Exemplo:
+	c:\>mkdir workspace
+	
+echo - comando utilizado para printar de volta no terminal uma frase ou um texto que digitamos.
+Exemplo:
+	c:\workspace> echo hello
+	hello
+
+echo > comando utlizado para crição de arquivos direto do terminal.  A ">" se trata de um direcionador de fluxo, ele vai pegar o texto que digitamos colondo dentro de um arquivo no qual vamos dar um nome.
+Exemplo:
+	c:\workspace> echo hello > hello.txt
+	
+del - Comando utilizado para deletar aquivos contidos numa pasta ou diretório.
+Exemplo:
+	c:\> del workspace
+	
+	
+rmdir - Comando utilizado para remover/excluir um diretório ou pasta com todos os arquivos contidos.
+Exemplo:
+	c:\> rmdir workspace /S /Q
+	
+OBS:	A flag "S" é de recursivamente/ recursivo, signifca que todas as subpastas/subdiretórios e arquivos serão existentes serão apagados.
+	A flag "Q" é de "force", significa que o impedimento de qualquer solicitação de confirmação perguntando se realmente você quer deletar os
+	subdiretórios/pastas e arquivos contidos.
+
+	 	
+	
+	
+Comandos básicos no terminal do Unix-Like (Linux)
+
+ls - Lista os diretorios e aquivos existentes na pasta em que estamos situados.
+Exemplo: 
+	perkles@perkles-desktop:/$ ls
+	
+cd - Permite a navegação entre as pastas sendo igual para todos os sistemas operacionais.
+Exemplo1: 
+	perkles@perkles-desktop:/$ cd /
+	perkles@perkles-desktop:/$ 		OBS: Observe que pernamanecemos na base do diretório linux "perkles@perkles-desktop:/$"
+	
+Exemplo2: 
+	perkles@perkles-desktop:/$ cd etc
+	perkles@perkles-desktop:/etc$ 		OBS: observe que fomos levados para a pasta "perkles@perkles-desktop:/etc$" 
+	
+cd .. - Utilizado para retroceder um nível na navegação.
+Exemplo: 
+	
+	perkles@perkles-desktop:/etc$ cd ..
+	perkles@perkles-desktop:/$
+	
+clear - Comando utlizado para limpar o terminal quando a mesmo está muito cheio
+Exemplo:
+	perkles@perkles-desktop:/$ clear
+	
+Tab - Tecla de atalho de autocompletar
+Exemplo:
+	perkles@perkles-desktop:/$ cd e+Tab
+	perkles@perkles-desktop:/etc$
+	
+mkdir - Comando utilizado para criação de pasta
+OBS: Para criação de pastas nos sistemas operacionais "Unix"(Linux) é necessario a ativação do "Super Usuário".
+
+Exemplo:
+	root@perkles-desktop:/# mkdir workspace
+	
+echo - comando utilizado para printar de volta no terminal uma frase ou um texto que digitamos.
+Exemplo:
+	root@perkles-desktop:/workspace# echo hello
+	hello
+
+echo > comando utlizado para crição de arquivos direto do terminal.  A ">" se trata de um direcionador de fluxo, ele vai pegar o texto que digitamos colondo dentro de um arquivo no qual vamos dar um nome.
+Exemplo:
+	root@perkles-desktop:/workspace# echo hello > hello.txt
+	
+rm - Comando utilizado para remover/excluir um diretório ou pasta com todos os arquivos contidos.
+Exemplo:
+	root@perkles-desktop:/# rm -rf workspace/
+
+rm *.* - Comando utilizado para remover todos os arquivos de um diretório
+Exemplo:
+	root@perkles-desktop:/workspace# rm *.*
+
+OBS:	A flag "r" é de recursivamente/ recursivo, signifca que todas as subpastas/subdiretórios e arquivos serão existentes serão apagados.
+	A flag "f" é de "force", significa que o impedimento de qualquer solicitação de confirmação perguntando se realmente você quer deletar os
+	subdiretórios/pastas e arquivos contidos.
